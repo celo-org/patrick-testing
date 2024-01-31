@@ -1,0 +1,21 @@
+name: Testing Github Action
+
+on:
+  pull_request:
+    paths:
+      - 'testing-action/**'
+      - '.github/workflows/testing-action.yaml'
+  workflow_dispatch:
+
+jobs:
+  Build-Container-dev:
+    uses: celo-org/reusable-workflows/.github/workflows/container-cicd.yaml@v1.14.2
+    if: github.ref != 'refs/heads/main'
+    with:
+      workload-id-provider: ${{ vars.WORKLOAD_ID_PROVIDER_NON_MAIN }}
+      service-account: patrick-testing-ro@clabs-secrets-and-permissions.iam.gserviceaccount.com
+      artifact-registry: ${{ vars.DEV_IMAGE_REPO }}/testing-action
+      tags: testing
+      context: ./testing-action
+      trivy: false
+
