@@ -1,4 +1,3 @@
 FROM debian:latest
 
-
-#
+COPY . .
