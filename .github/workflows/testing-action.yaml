@@ -9,7 +9,7 @@ on:
 
 jobs:
   Build-Container-dev:
-    uses: celo-org/reusable-workflows/.github/workflows/container-cicd.yaml@v1.14.1
+    uses: celo-org/reusable-workflows/.github/workflows/container-cicd.yaml@pputman/lower-default-test-no-creds-cleanup
     if: github.ref != 'refs/heads/main'
     with:
       workload-id-provider: projects/1094498259535/locations/global/workloadIdentityPools/gh-patrick-testing/providers/github-by-repos
