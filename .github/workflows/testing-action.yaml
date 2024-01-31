@@ -3,7 +3,7 @@ name: Testing Github Action
 on:
   pull_request:
     paths:
-      - 'testing-action/**'
+      - '**'
       - '.github/workflows/testing-action.yaml'
   workflow_dispatch:
 
@@ -16,7 +16,7 @@ jobs:
       service-account: patrick-testing-ro@security-circle.iam.gserviceaccount.com
       artifact-registry: ${{ vars.DEV_IMAGE_REPO }}/testing-action
       tags: testing
-      context: ./testing-action
+      context: ./
       trivy: false
 
 
