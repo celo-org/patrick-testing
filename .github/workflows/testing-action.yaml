@@ -12,10 +12,11 @@ jobs:
     uses: celo-org/reusable-workflows/.github/workflows/container-cicd.yaml@v1.14.2
     if: github.ref != 'refs/heads/main'
     with:
-      workload-id-provider: ${{ vars.WORKLOAD_ID_PROVIDER_NON_MAIN }}
+      workload-id-provider: projects/1094498259535/locations/global/workloadIdentityPools/gh-patrick-testing/providers/github-by-repos
       service-account: patrick-testing-ro@clabs-secrets-and-permissions.iam.gserviceaccount.com
       artifact-registry: ${{ vars.DEV_IMAGE_REPO }}/testing-action
       tags: testing
       context: ./testing-action
       trivy: false
+
 
