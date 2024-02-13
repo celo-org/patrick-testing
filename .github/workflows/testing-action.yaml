@@ -30,7 +30,7 @@ jobs:
         with:
           api-url: https://api.gateway.akeyless.celo-networks-dev.org
           access-id: p-kf9vjzruht6l
-          static-secrets: '{"/dynamic-secrets/keys/github/docs/contents=write,pull_requests=write":"NPM_TOKEN"}'
+          dynamic-secrets: '{"/dynamic-secrets/keys/github/docs/contents=write,pull_requests=write":"NPM_TOKEN"}'
 
   Build-Container-dev:
     uses: celo-org/reusable-workflows/.github/workflows/container-cicd.yaml@v1.14.2
