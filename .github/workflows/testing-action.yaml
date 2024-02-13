@@ -20,17 +20,15 @@ jobs:
       pull-requests: write
       repository-projects: write
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v4
-
-      - name: Akeyless Get Secrets
-        id: get_auth_token
-        uses:
-          docker://us-west1-docker.pkg.dev/devopsre/akeyless-public/akeyless-action:latest
+      - name: Fetch dynamic secrets from Akeyless
+        id: fetch-dynamic-secrets
+        uses: akeyless-community/akeyless-github-action@v1.0.1
         with:
-          api-url: https://api.gateway.akeyless.celo-networks-dev.org
           access-id: p-kf9vjzruht6l
-          dynamic-secrets: '{"/dynamic-secrets/keys/github/docs/contents=write,pull_requests=write":"NPM_TOKEN"}'
+          dynamic-secrets: |
+            - name: "/dynamic-secrets/keys/github/docs/contents=write,pull_requests=write"
+              output-name: "NPM_TOKEN"
+          access-type: jwt
 
   Build-Container-dev:
     uses: celo-org/reusable-workflows/.github/workflows/container-cicd.yaml@v1.14.2
