@@ -5,6 +5,10 @@ on:
     paths:
       - 'testing-action/**'
       - '.github/workflows/testing-action.yaml'
+  push:
+    paths:
+      - 'testing-action/**'
+      - '.github/workflows/testing-action.yaml'
   workflow_dispatch:
 
 jobs:
