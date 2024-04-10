@@ -3,7 +3,8 @@ name: 'test repo dispatch'
 
 on:
   repository_dispatch:
-#    types: [team, team_add]
+    types:
+      - webhook
 
 jobs:
   release:
