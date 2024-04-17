@@ -28,4 +28,4 @@ jobs:
       akeyless-github-access-id: p-kf9vjzruht6l
       akeyless-token-path: /static-secrets/security-circle/testing/test-npm
 #      check-auth-only: ${{ inputs.checkAuthOnly }}
-      check-auth-only: true
+      check-auth-only: false
