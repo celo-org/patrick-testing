@@ -1,5 +1,9 @@
 name: 'NPM Publish'
 on:
+  push:
+    branches:
+      - main
+      - 'prerelease/*'
   release:
     types: [published]
   workflow_dispatch:
@@ -10,7 +14,6 @@ on:
           type: choice
           options: 
             - true
-
 
 jobs:
   NPM-Publish:
