@@ -7,9 +7,9 @@ on:
       checkAuthOnly:
           description: 'For checking that auth works'
           required: true
-          type: boolean
-#          options: 
-#            - true
+          type: choice
+          options: 
+            - 'true'
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 
