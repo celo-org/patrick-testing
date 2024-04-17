@@ -1,0 +1,95 @@
+{
+  "name": "@pputman/rainbowkit-celo",
+  "author": "alvarof2",
+  "version": "1.0.1",
+  "description": "Quickly Setup RainbowKit for Celo",
+  "homepage": "https://rainbowkit-with-celo.vercel.app/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alvarof2/rainbowkit-celo-private.git"
+  },
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js"
+    },
+    "./chains": {
+      "types": "./chains/index.d.ts",
+      "import": "./chains/index.js"
+    },
+    "./chains/celo": {
+      "types": "./chains/celo.d.ts",
+      "import": "./chains/celo.js"
+    },
+    "./chains/alfajores": {
+      "types": "./chains/alfajores.d.ts",
+      "import": "./chains/alfajores.js"
+    },
+    "./chains/baklava": {
+      "types": "./chains/baklava.d.ts",
+      "import": "./chains/baklava.js"
+    },
+    "./chains/cannoli": {
+      "types": "./chains/cannoli.d.ts",
+      "import": "./chains/cannoli.js"
+    },
+    "./lists": {
+      "types": "./lists/index.d.ts",
+      "import": "./lists/index.js"
+    },
+    "./wallets": {
+      "types": "./wallets/index.d.ts",
+      "import": "./wallets/index.js"
+    },
+    "./wallets/celo-terminal": {
+      "types": "./wallets/celo-terminal.d.ts",
+      "import": "./wallets/celo-terminal.js"
+    },
+    "./wallets/celo-wallet": {
+      "types": "./wallets/celo-wallet.d.ts",
+      "import": "./wallets/celo-wallet.js"
+    },
+    "./wallets/valora": {
+      "types": "./wallets/valora.d.ts",
+      "import": "./wallets/valora.js"
+    }
+  },
+  "type": "module",
+  "sideEffects": false,
+  "license": "MIT",
+  "keywords": [
+    "celo",
+    "dapp",
+    "viem",
+    "crypto",
+    "rainbow-kit",
+    "web3",
+    "blockchain"
+  ],
+  "scripts": {
+    "prepublish": "\\cp ../../readme.md ./README.md",
+    "prepack": "yarn build",
+    "lint": "eslint *.ts*",
+    "clean": "tsc -b --clean",
+    "build": "tsc -b"
+  },
+  "dependencies": {
+    "@wagmi/chains": "^0.2.22"
+  },
+  "peerDependencies": {
+    "@rainbow-me/rainbowkit": "^1.0.0",
+    "viem": "^0.3.21",
+    "wagmi": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "eslint": "^8.40.0",
+    "eslint-config-custom": "*",
+    "react": "^17.0.2",
+    "tsconfig": "*",
+    "typescript": "^4.9.4"
+  }
+}

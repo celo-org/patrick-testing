@@ -1,0 +1,11 @@
+# ignore the .ts files
+*.ts
+
+*.map
+
+# include the .d.ts files
+!*.d.ts
+
+tsconfig.json
+
+.turbo/turbo-build.log
