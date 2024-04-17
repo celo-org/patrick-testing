@@ -9,7 +9,7 @@ on:
           required: true
           type: choice
           options: 
-            - "true"
+            - true
 
 #concurrency: ${{ github.workflow }}-${{ github.ref }}
 
@@ -27,5 +27,4 @@ jobs:
       akeyless-api-gateway: https://api.gateway.akeyless.celo-networks-dev.org
       akeyless-github-access-id: p-kf9vjzruht6l
       akeyless-token-path: /static-secrets/security-circle/testing/test-npm
-#      check-auth-only: ${{ inputs.checkAuthOnly }}
-      check-auth-only: false
+      check-auth-only: ${{ inputs.checkAuthOnly }}
