@@ -9,7 +9,8 @@ on:
           required: true
           type: choice
           options: 
-            - true
+            - "true"
+
 #concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 
