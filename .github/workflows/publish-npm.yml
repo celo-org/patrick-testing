@@ -1,7 +1,7 @@
 name: 'NPM Publish'
 on:
   repository_dispatch:
-#    types: [membership, team.edited, team_add, team.added_to_repository]
+    types: [membership, team]
   push:
     branches:
       - main
