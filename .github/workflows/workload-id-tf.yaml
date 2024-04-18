@@ -7,7 +7,6 @@ on:
 jobs:
   release:
     name: Release
-    runs-on: ['ubuntu']
     permissions:
       contents: write
       id-token: write
@@ -25,4 +24,3 @@ jobs:
           api-url: https://api.gateway.akeyless.celo-networks-dev.org
           access-id: p-kf9vjzruht6l
           static-secrets: '{"/static-secrets/test-fail":"NPM_TOKEN"}'
-
