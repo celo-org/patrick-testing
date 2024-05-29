@@ -39,7 +39,7 @@ jobs:
             var fs = require('fs');
             var issue_number = Number(fs.readFileSync('pr/pr-number'));
             github.rest.issues.createComment({
-              issue_number: context.issue.number,
+              issue_number: issue_number,
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: "Thanks for submitting this PR!\n\nUnfortunately, it has some linter errors, so we can't merge it yet. Can you please fix them?\n\nRunning yarn `lint:fix` in the root of the repository may fix them automatically."
