@@ -20,6 +20,7 @@ jobs:
         with:
           name: pr-number
           path: pr
+          repo: ${{ github.context.repository }}
           run-id: ${{github.event.workflow_run.id }}
       - name: Display structure of downloaded files
         run: ls -R pr
