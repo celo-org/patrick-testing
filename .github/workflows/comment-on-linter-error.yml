@@ -20,7 +20,7 @@ jobs:
         with:
           name: pr-number
           path: pr
-          repository: ${{ github.context.repository }}
+          repository: ${{ github.repository }}
           run-id: ${{github.event.workflow_run.id }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Display structure of downloaded files
