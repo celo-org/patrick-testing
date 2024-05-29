@@ -30,6 +30,10 @@ jobs:
           path: pr
       - name: Display structure of downloaded files
         run: ls -R pr
+      - name: Catfie
+        run: cat pr/pr-number
+
+
 
       - name: 'Comment on PR'
         uses: actions/github-script@v6
