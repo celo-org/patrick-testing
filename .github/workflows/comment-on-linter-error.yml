@@ -20,13 +20,11 @@ jobs:
         with:
           name: pr-number
           path: pr
+          run_id: ${{github.event.workflow_run.id }},
       - name: Display structure of downloaded files
         run: ls -R pr
-      - name: Catfie
+      - name: Catfile
         run: cat pr/pr-number
-
-
-
       - name: 'Comment on PR'
         uses: actions/github-script@v6
         with:
