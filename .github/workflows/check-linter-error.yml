@@ -4,8 +4,8 @@ on:
   pull_request:
     types:
       - opened
-    branches:
-      - $default-branch
+#    branches:
+#      - $default-branch
 
 concurrency:
   group: ${{github.workflow}}-${{github.ref}}
