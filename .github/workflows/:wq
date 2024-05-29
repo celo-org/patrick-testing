@@ -18,7 +18,7 @@ jobs:
       - name: 'Download artifact'
         uses: actions/download-artifact@v4
         with:
-          name: pr-number
+          name: pr
           path: pr/
 
       - name: 'Comment on PR'
@@ -27,7 +27,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             var fs = require('fs');
-            var issue_number = Number(fs.readFileSync('./pr/pr-number'));
+            var issue_number = Number(fs.readFileSync('./pr/NR'));
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
