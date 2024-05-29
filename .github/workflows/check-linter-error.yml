@@ -26,9 +26,9 @@ jobs:
         if: ${{ failure() }}
         run: |
           mkdir -p ./pr
-          echo ${{ github.event.number }} > ./pr/NR
+          echo ${{ github.event.number }} > ./pr/pr-number
       - uses: actions/upload-artifact@v4
         if: ${{ failure() }}
         with:
           name: pr-number
-          path: pr/NR
+          path: pr/pr-number

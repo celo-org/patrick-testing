@@ -15,14 +15,6 @@ jobs:
       github.event.workflow_run.event == 'pull_request' &&
       github.event.workflow_run.conclusion == 'failure'
     steps:
-      - name: Save PR number
-        run: |
-          mkdir -p ./pr
-          echo ${{ github.event.number }} > ./pr/pr-number
-      - uses: actions/upload-artifact@v4
-        with:
-          name: pr-number
-          path: pr/pr-number
       - name: 'Download artifact'
         uses: actions/download-artifact@v4
         with:
