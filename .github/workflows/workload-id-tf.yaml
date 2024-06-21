@@ -3,7 +3,7 @@ name: 'test repo dispatch'
 
 on:
   repository_dispatch:
-#    types: [membership, team.edited, team_add, team.added_to_repository]
+    types: [membership, team.edited, team_add, team.added_to_repository]
 jobs:
   release:
     runs-on: ubuntu-latest
