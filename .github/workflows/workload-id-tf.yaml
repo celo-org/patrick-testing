@@ -5,6 +5,7 @@ on:
   repository_dispatch:
 #    types: [membership, team.edited, team_add, team.added_to_repository]
 jobs:
+  runs-on: ubuntu-latest
   release:
     name: Release
     permissions:
