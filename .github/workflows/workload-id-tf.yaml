@@ -3,7 +3,6 @@ name: 'test repo dispatch'
 
 on:
   repository_dispatch:
-    types: [teamchange]
 jobs:
   release:
     runs-on: ubuntu-latest
