@@ -21,7 +21,7 @@ jobs:
         with:
           ref: "refs/pull/${{ github.event.number }}/merge"
       - name: Fail the Build
-        uses: cutenode/action-always-fail@v1.0.0
+        uses: cutenode/action-always-fail@v1.0.1
       - name: Save PR number
         if: ${{ failure() }}
         run: |
