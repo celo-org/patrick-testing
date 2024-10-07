@@ -76,7 +76,7 @@
     "build": "tsc -b"
   },
   "dependencies": {
-    "@wagmi/chains": "^0.2.22"
+    "@wagmi/chains": "^0.3.0"
   },
   "peerDependencies": {
     "@rainbow-me/rainbowkit": "^1.0.0",
